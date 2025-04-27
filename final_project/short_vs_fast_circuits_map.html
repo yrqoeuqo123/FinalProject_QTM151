@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0307570fbc4f5abc96ed5800db96bb5c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0307570fbc4f5abc96ed5800db96bb5c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0307570fbc4f5abc96ed5800db96bb5c = L.map(
+                "map_0307570fbc4f5abc96ed5800db96bb5c",
+                {
+                    center: [33.96558, 35.089861],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_0307570fbc4f5abc96ed5800db96bb5c);
+
+            
+
+        
+    
+            var tile_layer_816e85b340030cbd1880317b8b8eb9e6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_816e85b340030cbd1880317b8b8eb9e6.addTo(map_0307570fbc4f5abc96ed5800db96bb5c);
+        
+    
+            var tile_layer_901b5f60699a28370fc9ed6f5bd8a74f = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_901b5f60699a28370fc9ed6f5bd8a74f.addTo(map_0307570fbc4f5abc96ed5800db96bb5c);
+        
+    
+            var feature_group_55abacad4c374de620e5d5612c41c9dd = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_1f879c463abbb5d6aa2d877af7905e12 = L.circleMarker(
+                [45.6156, 9.28111],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_55abacad4c374de620e5d5612c41c9dd);
+        
+    
+        var popup_a5bd8d3be9a6e13658c9193817efcba5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b5430c694de61c46fba7bfff75a6333 = $(`<div id="html_8b5430c694de61c46fba7bfff75a6333" style="width: 100.0%; height: 100.0%;"><b>Autodromo Nazionale di Monza</b><br>Avg Race Duration: 81.2 min</div>`)[0];
+                popup_a5bd8d3be9a6e13658c9193817efcba5.setContent(html_8b5430c694de61c46fba7bfff75a6333);
+            
+        
+
+        circle_marker_1f879c463abbb5d6aa2d877af7905e12.bindPopup(popup_a5bd8d3be9a6e13658c9193817efcba5)
+        ;
+
+        
+    
+    
+            circle_marker_1f879c463abbb5d6aa2d877af7905e12.bindTooltip(
+                `<div>
+                     Autodromo Nazionale di Monza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ade5ff88ad3638ed5949af7b0d64e640 = L.circleMarker(
+                [25.49, 51.4542],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_55abacad4c374de620e5d5612c41c9dd);
+        
+    
+        var popup_aace349590860faab50d33cfd92c71ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d3958c2549d35d7ff20d33b5dc63a9b = $(`<div id="html_6d3958c2549d35d7ff20d33b5dc63a9b" style="width: 100.0%; height: 100.0%;"><b>Losail International Circuit</b><br>Avg Race Duration: 85.5 min</div>`)[0];
+                popup_aace349590860faab50d33cfd92c71ec.setContent(html_6d3958c2549d35d7ff20d33b5dc63a9b);
+            
+        
+
+        circle_marker_ade5ff88ad3638ed5949af7b0d64e640.bindPopup(popup_aace349590860faab50d33cfd92c71ec)
+        ;
+
+        
+    
+    
+            circle_marker_ade5ff88ad3638ed5949af7b0d64e640.bindTooltip(
+                `<div>
+                     Losail International Circuit
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_696a0fd5c7cbb8890422e2ef8bf1b662 = L.circleMarker(
+                [47.2197, 14.7647],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_55abacad4c374de620e5d5612c41c9dd);
+        
+    
+        var popup_074609b8d393f8df1d0f9292fa971011 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d3eb5f86c7f33d5c73f5540b58e980a = $(`<div id="html_3d3eb5f86c7f33d5c73f5540b58e980a" style="width: 100.0%; height: 100.0%;"><b>Red Bull Ring</b><br>Avg Race Duration: 86.3 min</div>`)[0];
+                popup_074609b8d393f8df1d0f9292fa971011.setContent(html_3d3eb5f86c7f33d5c73f5540b58e980a);
+            
+        
+
+        circle_marker_696a0fd5c7cbb8890422e2ef8bf1b662.bindPopup(popup_074609b8d393f8df1d0f9292fa971011)
+        ;
+
+        
+    
+    
+            circle_marker_696a0fd5c7cbb8890422e2ef8bf1b662.bindTooltip(
+                `<div>
+                     Red Bull Ring
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_907502c335b16794328fe93fcf63c5b3 = L.circleMarker(
+                [50.4372, 5.97139],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_55abacad4c374de620e5d5612c41c9dd);
+        
+    
+        var popup_26eb1fd2e54d370d523ec37fa4e1900c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e4266024c69ed1bd9dc43cc25becfdb = $(`<div id="html_0e4266024c69ed1bd9dc43cc25becfdb" style="width: 100.0%; height: 100.0%;"><b>Circuit de Spa-Francorchamps</b><br>Avg Race Duration: 87.6 min</div>`)[0];
+                popup_26eb1fd2e54d370d523ec37fa4e1900c.setContent(html_0e4266024c69ed1bd9dc43cc25becfdb);
+            
+        
+
+        circle_marker_907502c335b16794328fe93fcf63c5b3.bindPopup(popup_26eb1fd2e54d370d523ec37fa4e1900c)
+        ;
+
+        
+    
+    
+            circle_marker_907502c335b16794328fe93fcf63c5b3.bindTooltip(
+                `<div>
+                     Circuit de Spa-Francorchamps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e42c824959d4ac89eaaaa7161adff49c = L.circleMarker(
+                [43.2506, 5.79167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_55abacad4c374de620e5d5612c41c9dd);
+        
+    
+        var popup_970405baf7f41635f9f8f5ba22f49616 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_535569afe942ec0085861aeb13911030 = $(`<div id="html_535569afe942ec0085861aeb13911030" style="width: 100.0%; height: 100.0%;"><b>Circuit Paul Ricard</b><br>Avg Race Duration: 89.4 min</div>`)[0];
+                popup_970405baf7f41635f9f8f5ba22f49616.setContent(html_535569afe942ec0085861aeb13911030);
+            
+        
+
+        circle_marker_e42c824959d4ac89eaaaa7161adff49c.bindPopup(popup_970405baf7f41635f9f8f5ba22f49616)
+        ;
+
+        
+    
+    
+            circle_marker_e42c824959d4ac89eaaaa7161adff49c.bindTooltip(
+                `<div>
+                     Circuit Paul Ricard
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2cda1f23d76823bbef33ea5b7915032 = L.circleMarker(
+                [40.9517, 29.405],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_55abacad4c374de620e5d5612c41c9dd);
+        
+    
+        var popup_675cc690f4e2f45373bd5febe86b1eeb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f933f77b0fcb07c7db13c65e16c1e90 = $(`<div id="html_6f933f77b0fcb07c7db13c65e16c1e90" style="width: 100.0%; height: 100.0%;"><b>Istanbul Park</b><br>Avg Race Duration: 90.2 min</div>`)[0];
+                popup_675cc690f4e2f45373bd5febe86b1eeb.setContent(html_6f933f77b0fcb07c7db13c65e16c1e90);
+            
+        
+
+        circle_marker_d2cda1f23d76823bbef33ea5b7915032.bindPopup(popup_675cc690f4e2f45373bd5febe86b1eeb)
+        ;
+
+        
+    
+    
+            circle_marker_d2cda1f23d76823bbef33ea5b7915032.bindTooltip(
+                `<div>
+                     Istanbul Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a003e7700f8ca57d3138bac2480d895e = L.circleMarker(
+                [28.3487, 77.5331],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_55abacad4c374de620e5d5612c41c9dd);
+        
+    
+        var popup_5b79bf087131fb8ae2d80cfa6d63528f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_887da33ece1f885d0715a693a3a03069 = $(`<div id="html_887da33ece1f885d0715a693a3a03069" style="width: 100.0%; height: 100.0%;"><b>Buddh International Circuit</b><br>Avg Race Duration: 91.9 min</div>`)[0];
+                popup_5b79bf087131fb8ae2d80cfa6d63528f.setContent(html_887da33ece1f885d0715a693a3a03069);
+            
+        
+
+        circle_marker_a003e7700f8ca57d3138bac2480d895e.bindPopup(popup_5b79bf087131fb8ae2d80cfa6d63528f)
+        ;
+
+        
+    
+    
+            circle_marker_a003e7700f8ca57d3138bac2480d895e.bindTooltip(
+                `<div>
+                     Buddh International Circuit
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_32cf4e9a575578c0be9d91f191edf6f6 = L.circleMarker(
+                [46.8642, 3.16361],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_55abacad4c374de620e5d5612c41c9dd);
+        
+    
+        var popup_8e4a38f62e1595093d39dfa458fd8422 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10dd30b7c34d2a9292b879933027d7a1 = $(`<div id="html_10dd30b7c34d2a9292b879933027d7a1" style="width: 100.0%; height: 100.0%;"><b>Circuit de Nevers Magny-Cours</b><br>Avg Race Duration: 91.9 min</div>`)[0];
+                popup_8e4a38f62e1595093d39dfa458fd8422.setContent(html_10dd30b7c34d2a9292b879933027d7a1);
+            
+        
+
+        circle_marker_32cf4e9a575578c0be9d91f191edf6f6.bindPopup(popup_8e4a38f62e1595093d39dfa458fd8422)
+        ;
+
+        
+    
+    
+            circle_marker_32cf4e9a575578c0be9d91f191edf6f6.bindTooltip(
+                `<div>
+                     Circuit de Nevers Magny-Cours
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0a9da5838bc62bfcfc391e9b8ee42e16 = L.circleMarker(
+                [49.3278, 8.56583],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_55abacad4c374de620e5d5612c41c9dd);
+        
+    
+        var popup_b8b8300c2bdbe8707b7d5fe05ddae9b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f6dcc267d95a009c7564b9a122a8e3e = $(`<div id="html_7f6dcc267d95a009c7564b9a122a8e3e" style="width: 100.0%; height: 100.0%;"><b>Hockenheimring</b><br>Avg Race Duration: 92.0 min</div>`)[0];
+                popup_b8b8300c2bdbe8707b7d5fe05ddae9b4.setContent(html_7f6dcc267d95a009c7564b9a122a8e3e);
+            
+        
+
+        circle_marker_0a9da5838bc62bfcfc391e9b8ee42e16.bindPopup(popup_b8b8300c2bdbe8707b7d5fe05ddae9b4)
+        ;
+
+        
+    
+    
+            circle_marker_0a9da5838bc62bfcfc391e9b8ee42e16.bindTooltip(
+                `<div>
+                     Hockenheimring
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6a9651c159c0b6496750e44841258a0 = L.circleMarker(
+                [-37.8497, 144.968],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_55abacad4c374de620e5d5612c41c9dd);
+        
+    
+        var popup_4fe3da7c0bc3619033f0e19ef9fe1d0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2e25d3531e3f9ba5203bcbdba9e224a = $(`<div id="html_c2e25d3531e3f9ba5203bcbdba9e224a" style="width: 100.0%; height: 100.0%;"><b>Albert Park Grand Prix Circuit</b><br>Avg Race Duration: 92.3 min</div>`)[0];
+                popup_4fe3da7c0bc3619033f0e19ef9fe1d0b.setContent(html_c2e25d3531e3f9ba5203bcbdba9e224a);
+            
+        
+
+        circle_marker_d6a9651c159c0b6496750e44841258a0.bindPopup(popup_4fe3da7c0bc3619033f0e19ef9fe1d0b)
+        ;
+
+        
+    
+    
+            circle_marker_d6a9651c159c0b6496750e44841258a0.bindTooltip(
+                `<div>
+                     Albert Park Grand Prix Circuit
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_55abacad4c374de620e5d5612c41c9dd.addTo(map_0307570fbc4f5abc96ed5800db96bb5c);
+        
+    
+            var feature_group_853c7c5017286e7195b78dab03f1e63d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_28c10ef6ebc639002efed0d0295ea3f9 = L.circleMarker(
+                [47.2197, 14.7647],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_853c7c5017286e7195b78dab03f1e63d);
+        
+    
+        var popup_a1d84d9c248245f5b78e0b3c3b2838c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ee92df5d78b0fb07bd1d930d8d02beb6 = $(`<div id="html_ee92df5d78b0fb07bd1d930d8d02beb6" style="width: 100.0%; height: 100.0%;"><b>Red Bull Ring</b><br>Avg Fastest Lap: 69.06 s</div>`)[0];
+                popup_a1d84d9c248245f5b78e0b3c3b2838c5.setContent(html_ee92df5d78b0fb07bd1d930d8d02beb6);
+            
+        
+
+        circle_marker_28c10ef6ebc639002efed0d0295ea3f9.bindPopup(popup_a1d84d9c248245f5b78e0b3c3b2838c5)
+        ;
+
+        
+    
+    
+            circle_marker_28c10ef6ebc639002efed0d0295ea3f9.bindTooltip(
+                `<div>
+                     Red Bull Ring
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de1eed6d2d786052cf87fa8435ebe478 = L.circleMarker(
+                [39.795, -86.2347],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_853c7c5017286e7195b78dab03f1e63d);
+        
+    
+        var popup_83c37ba6b1d016a3781a15dfd4cc1261 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ed41b521d5393eebd67ba233e6dc809 = $(`<div id="html_4ed41b521d5393eebd67ba233e6dc809" style="width: 100.0%; height: 100.0%;"><b>Indianapolis Motor Speedway</b><br>Avg Fastest Lap: 72.60 s</div>`)[0];
+                popup_83c37ba6b1d016a3781a15dfd4cc1261.setContent(html_4ed41b521d5393eebd67ba233e6dc809);
+            
+        
+
+        circle_marker_de1eed6d2d786052cf87fa8435ebe478.bindPopup(popup_83c37ba6b1d016a3781a15dfd4cc1261)
+        ;
+
+        
+    
+    
+            circle_marker_de1eed6d2d786052cf87fa8435ebe478.bindTooltip(
+                `<div>
+                     Indianapolis Motor Speedway
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4d4b003472cddcce3cff8b21bb18df0 = L.circleMarker(
+                [52.3888, 4.54092],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_853c7c5017286e7195b78dab03f1e63d);
+        
+    
+        var popup_fb7c3882d489a78091b18b4f09324d90 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ffa698af9a5b69f15b2e344d0411c5a2 = $(`<div id="html_ffa698af9a5b69f15b2e344d0411c5a2" style="width: 100.0%; height: 100.0%;"><b>Circuit Park Zandvoort</b><br>Avg Fastest Lap: 74.41 s</div>`)[0];
+                popup_fb7c3882d489a78091b18b4f09324d90.setContent(html_ffa698af9a5b69f15b2e344d0411c5a2);
+            
+        
+
+        circle_marker_f4d4b003472cddcce3cff8b21bb18df0.bindPopup(popup_fb7c3882d489a78091b18b4f09324d90)
+        ;
+
+        
+    
+    
+            circle_marker_f4d4b003472cddcce3cff8b21bb18df0.bindTooltip(
+                `<div>
+                     Circuit Park Zandvoort
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba47e1d5c9cc25a6320ef8bd403c985b = L.circleMarker(
+                [-23.7036, -46.6997],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_853c7c5017286e7195b78dab03f1e63d);
+        
+    
+        var popup_190fc22620658c5a7088c25936c9a17f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca9aced2b5a2a73be0d0c7b714d97c87 = $(`<div id="html_ca9aced2b5a2a73be0d0c7b714d97c87" style="width: 100.0%; height: 100.0%;"><b>Autódromo José Carlos Pace</b><br>Avg Fastest Lap: 75.18 s</div>`)[0];
+                popup_190fc22620658c5a7088c25936c9a17f.setContent(html_ca9aced2b5a2a73be0d0c7b714d97c87);
+            
+        
+
+        circle_marker_ba47e1d5c9cc25a6320ef8bd403c985b.bindPopup(popup_190fc22620658c5a7088c25936c9a17f)
+        ;
+
+        
+    
+    
+            circle_marker_ba47e1d5c9cc25a6320ef8bd403c985b.bindTooltip(
+                `<div>
+                     Autódromo José Carlos Pace
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba0f88fe0a9de61d6afd17f07b6bd19d = L.circleMarker(
+                [46.8642, 3.16361],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_853c7c5017286e7195b78dab03f1e63d);
+        
+    
+        var popup_898293bfce5f9adf6c78fd02b9fd8897 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68fa15f6873fae754e5cf8ceae673632 = $(`<div id="html_68fa15f6873fae754e5cf8ceae673632" style="width: 100.0%; height: 100.0%;"><b>Circuit de Nevers Magny-Cours</b><br>Avg Fastest Lap: 76.90 s</div>`)[0];
+                popup_898293bfce5f9adf6c78fd02b9fd8897.setContent(html_68fa15f6873fae754e5cf8ceae673632);
+            
+        
+
+        circle_marker_ba0f88fe0a9de61d6afd17f07b6bd19d.bindPopup(popup_898293bfce5f9adf6c78fd02b9fd8897)
+        ;
+
+        
+    
+    
+            circle_marker_ba0f88fe0a9de61d6afd17f07b6bd19d.bindTooltip(
+                `<div>
+                     Circuit de Nevers Magny-Cours
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_294b0c6d508409a3960ac5bc7f55dfd1 = L.circleMarker(
+                [45.5, -73.5228],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_853c7c5017286e7195b78dab03f1e63d);
+        
+    
+        var popup_b0c7b9217c4a4da16f576499924da7fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ebdd73b2fa0ec44a2bd86b7331c4b2ab = $(`<div id="html_ebdd73b2fa0ec44a2bd86b7331c4b2ab" style="width: 100.0%; height: 100.0%;"><b>Circuit Gilles Villeneuve</b><br>Avg Fastest Lap: 77.08 s</div>`)[0];
+                popup_b0c7b9217c4a4da16f576499924da7fd.setContent(html_ebdd73b2fa0ec44a2bd86b7331c4b2ab);
+            
+        
+
+        circle_marker_294b0c6d508409a3960ac5bc7f55dfd1.bindPopup(popup_b0c7b9217c4a4da16f576499924da7fd)
+        ;
+
+        
+    
+    
+            circle_marker_294b0c6d508409a3960ac5bc7f55dfd1.bindTooltip(
+                `<div>
+                     Circuit Gilles Villeneuve
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c97fc598d10e46ba20a3c48861679a8 = L.circleMarker(
+                [43.7347, 7.42056],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_853c7c5017286e7195b78dab03f1e63d);
+        
+    
+        var popup_b953514e539e1f97e9ca958a4cb39ea1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a21f4ea125bba1deae0fda5b29adc79b = $(`<div id="html_a21f4ea125bba1deae0fda5b29adc79b" style="width: 100.0%; height: 100.0%;"><b>Circuit de Monaco</b><br>Avg Fastest Lap: 77.13 s</div>`)[0];
+                popup_b953514e539e1f97e9ca958a4cb39ea1.setContent(html_a21f4ea125bba1deae0fda5b29adc79b);
+            
+        
+
+        circle_marker_7c97fc598d10e46ba20a3c48861679a8.bindPopup(popup_b953514e539e1f97e9ca958a4cb39ea1)
+        ;
+
+        
+    
+    
+            circle_marker_7c97fc598d10e46ba20a3c48861679a8.bindTooltip(
+                `<div>
+                     Circuit de Monaco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_70a22b8f4a731fbb44d7e2329e5da708 = L.circleMarker(
+                [49.3278, 8.56583],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_853c7c5017286e7195b78dab03f1e63d);
+        
+    
+        var popup_1fe8df966f6acd0479badbe25b44f5e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_845d7b7b13850e5986813f4fb5e79678 = $(`<div id="html_845d7b7b13850e5986813f4fb5e79678" style="width: 100.0%; height: 100.0%;"><b>Hockenheimring</b><br>Avg Fastest Lap: 77.47 s</div>`)[0];
+                popup_1fe8df966f6acd0479badbe25b44f5e5.setContent(html_845d7b7b13850e5986813f4fb5e79678);
+            
+        
+
+        circle_marker_70a22b8f4a731fbb44d7e2329e5da708.bindPopup(popup_1fe8df966f6acd0479badbe25b44f5e5)
+        ;
+
+        
+    
+    
+            circle_marker_70a22b8f4a731fbb44d7e2329e5da708.bindTooltip(
+                `<div>
+                     Hockenheimring
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93ec7f28d4a7b3a0b189cc3938fd650b = L.circleMarker(
+                [43.9975, 11.3719],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_853c7c5017286e7195b78dab03f1e63d);
+        
+    
+        var popup_a03d09f1b108a9f46672b38f19cff84e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19ec51f1866a305cd21579d7744097f9 = $(`<div id="html_19ec51f1866a305cd21579d7744097f9" style="width: 100.0%; height: 100.0%;"><b>Autodromo Internazionale del Mugello</b><br>Avg Fastest Lap: 80.79 s</div>`)[0];
+                popup_a03d09f1b108a9f46672b38f19cff84e.setContent(html_19ec51f1866a305cd21579d7744097f9);
+            
+        
+
+        circle_marker_93ec7f28d4a7b3a0b189cc3938fd650b.bindPopup(popup_a03d09f1b108a9f46672b38f19cff84e)
+        ;
+
+        
+    
+    
+            circle_marker_93ec7f28d4a7b3a0b189cc3938fd650b.bindTooltip(
+                `<div>
+                     Autodromo Internazionale del Mugello
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e4a05170b5099e4c0e3de7be6ba4a25 = L.circleMarker(
+                [44.3439, 11.7167],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_853c7c5017286e7195b78dab03f1e63d);
+        
+    
+        var popup_ea1450a4e56c575fb29aa98930704df7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ccc3d60b66cd69d694af36a683db8633 = $(`<div id="html_ccc3d60b66cd69d694af36a683db8633" style="width: 100.0%; height: 100.0%;"><b>Autodromo Enzo e Dino Ferrari</b><br>Avg Fastest Lap: 80.85 s</div>`)[0];
+                popup_ea1450a4e56c575fb29aa98930704df7.setContent(html_ccc3d60b66cd69d694af36a683db8633);
+            
+        
+
+        circle_marker_0e4a05170b5099e4c0e3de7be6ba4a25.bindPopup(popup_ea1450a4e56c575fb29aa98930704df7)
+        ;
+
+        
+    
+    
+            circle_marker_0e4a05170b5099e4c0e3de7be6ba4a25.bindTooltip(
+                `<div>
+                     Autodromo Enzo e Dino Ferrari
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_853c7c5017286e7195b78dab03f1e63d.addTo(map_0307570fbc4f5abc96ed5800db96bb5c);
+        
+    
+            var layer_control_8dded55563867b5c056ea3a68a2bae46_layers = {
+                base_layers : {
+                    "Default Map" : tile_layer_816e85b340030cbd1880317b8b8eb9e6,
+                    "Satellite View" : tile_layer_901b5f60699a28370fc9ed6f5bd8a74f,
+                },
+                overlays :  {
+                    "Top 10 Shortest Races" : feature_group_55abacad4c374de620e5d5612c41c9dd,
+                    "Top 10 Fastest-Lap Circuits" : feature_group_853c7c5017286e7195b78dab03f1e63d,
+                },
+            };
+            let layer_control_8dded55563867b5c056ea3a68a2bae46 = L.control.layers(
+                layer_control_8dded55563867b5c056ea3a68a2bae46_layers.base_layers,
+                layer_control_8dded55563867b5c056ea3a68a2bae46_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_0307570fbc4f5abc96ed5800db96bb5c);
+
+        
+</script>
+</html>
